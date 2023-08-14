@@ -1,0 +1,98 @@
+:root{
+    --gradient: linear-gradient(94.47deg, #fdfdfd 30.46%, #fdfdfd 99.9%);
+      --lightBlue: rgb(84, 253, 239);
+      --Green: rgb(97, 255, 176);
+      --Pink: rgb(222, 78, 162);
+}
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+  
+body{
+    background-color: #111;
+    font-family: 'Natsuzemi Maru Gothic', san-serif;
+    color: #fff;
+    border-radius: 10px;
+    padding: 80px;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    background: url(assets/Wallpaper.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+}
+
+.margin-content{
+    margin-top: 20vh;
+}
+
+h1{
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: San Francisco, Helvetica, Arial, san-serif;
+}
+
+.pfp{
+    border-radius: 7px;
+    width: 100px;
+    height: 100px;
+}
+
+.under-txt{
+    font-family: San Francisco, Helvetica, Arial, san-serif;
+    font-size: 17px;
+}
+
+.grey-link{
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 25px;
+    margin-bottom: -1.2rem;
+}
+
+.box{/* From https://css.glass */
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 50px;
+}
+
+
+h1 > .gradient-txt {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right, 
+    var(--lightBlue),
+    var(--Green),
+    var(--Pink),
+    var(--lightBlue)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+@media (max-width: 400px){
+    .box{
+        padding: 30px;
+    }
+}
+
+.inf{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
