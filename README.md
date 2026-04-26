@@ -1,4 +1,7 @@
-# Kraz.bio
-base on Kingsly.bio
+# KRAZ.BIO
 
-Discord RPC with [Lanyard](https://github.com/Phineas/lanyard), added by [lonelil](https://github.com/lonelil)
+Kraz.BIO V2
+
+MADE BY KRAZ
+
+© 2026 KRAZ.BIO All Rights Reserved.
