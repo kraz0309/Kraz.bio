@@ -17,22 +17,17 @@
         body { background-color: var(--bg); color: #eee; font-family: 'Inter', sans-serif; overflow-x: hidden; cursor: none; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         
-        /* Hide scrollbar but keep functionality */
         ::-webkit-scrollbar { display: none; }
 
-        /* Custom Cursor */
         #cursor-dot { width: 5px; height: 5px; background: var(--accent); position: fixed; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate(-50%, -50%); }
         #cursor-outline { width: 35px; height: 35px; border: 1px solid rgba(59, 130, 246, 0.4); position: fixed; pointer-events: none; z-index: 9998; border-radius: 50%; transform: translate(-50%, -50%); transition: width 0.3s, height 0.3s; }
         
-        /* Bento Card Styles */
         .bento-card { background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 24px; transition: all 0.4s ease; height: 100%; }
         .bento-card:hover { border-color: #333; transform: translateY(-4px); background: #0d0d0d; }
 
-        /* Scroll Reveal Animation */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.2, 0, 0.2, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* Logo Animation */
         .logo-container { position: relative; width: 60px; height: 40px; display: flex; align-items: center; justify-content: center; }
         .atomic-orbit { position: absolute; width: 40px; height: 40px; border: 1.5px solid rgba(59, 130, 246, 0.4); border-radius: 50%; animation: spin 4s linear infinite; }
         .atomic-orbit::after { content: ''; position: absolute; top: -4px; left: 50%; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 12px var(--accent); }
@@ -162,7 +157,6 @@
     </div>
 
     <script>
-        // Cursor Follow Logic
         const dot = document.getElementById('cursor-dot');
         const outline = document.getElementById('cursor-outline');
 
@@ -176,7 +170,6 @@
             }, { duration: 400, fill: "forwards" });
         });
 
-        // Intersection Observer for Reveal on Scroll
         const observerOptions = {
             threshold: 0.1
         };
