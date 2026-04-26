@@ -1,68 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style>
-/* customizable snowflake styling */
-.snowflake {
-  color: #fff;
-  font-size: 1em;
-  font-family: 'Natsuzemi Maru Gothic', sans-serif;
-  text-shadow: 0 0 3px #000;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kraz.bio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0e0e0e;
+            --card: #0a0a0a;
+            --border: #1a1a1a;
+            --accent: #3b82f6;
+        }
 
-@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
-</style>
-</div>
+        body { background-color: var(--bg); color: #eee; font-family: 'Inter', sans-serif; overflow-x: hidden; cursor: none; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        /* Hide scrollbar but keep functionality */
+        ::-webkit-scrollbar { display: none; }
 
+        /* Custom Cursor */
+        #cursor-dot { width: 5px; height: 5px; background: var(--accent); position: fixed; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate(-50%, -50%); }
+        #cursor-outline { width: 35px; height: 35px; border: 1px solid rgba(59, 130, 246, 0.4); position: fixed; pointer-events: none; z-index: 9998; border-radius: 50%; transform: translate(-50%, -50%); transition: width 0.3s, height 0.3s; }
+        
+        /* Bento Card Styles */
+        .bento-card { background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 24px; transition: all 0.4s ease; height: 100%; }
+        .bento-card:hover { border-color: #333; transform: translateY(-4px); background: #0d0d0d; }
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kraz | Bio</title>
-    <link rel="stylesheet" href="main.css" />
-    <script
-      src="https://kit.fontawesome.com/cf16def632.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <meta charset = "utf-8">
-    <link rel="shotcut icon" type="x-icon" href="assets/pfp.jpeg">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.1">
-    <title>Kraz</title>
-  </head>
-  <body>
-    <div class="margin-content">
-      <div class="box">
-        <img
-          class="pfp"
-          src="assets/pfp.jpeg"
-        />
-        <h1><span class="gradient-txt">Kraz </span></h1>
-        <p class="under-txt">fps player / programmer / producer</p>
-        <div class="links">
-          <a
-            href="https://soundcloud.com/j3rry0309"
-            class="grey-link"
-            ><i class="fa-brands fa-soundcloud"></i
-          ></a>
-          <a href="https://github.com/kraz0309" class="grey-link"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a href="https://twitter.com/j3rryyy_" class="grey-link"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-          <a href="https://www.instagram.com/j3rryyy_/" class="grey-link"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="https://www.youtube.com/@J3rry" class="grey-link"
-            ><i class="fa-brands fa-youtube"></i
-          ></a>
-		  <a
-            href="https://twitch.tv/ttv_kraz_hk" class="grey-link"
-            ><i class="fa-brands fa-twitch"></i
-          ></a>
+        /* Scroll Reveal Animation */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.2, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Logo Animation */
+        .logo-container { position: relative; width: 60px; height: 40px; display: flex; align-items: center; justify-content: center; }
+        .atomic-orbit { position: absolute; width: 40px; height: 40px; border: 1.5px solid rgba(59, 130, 246, 0.4); border-radius: 50%; animation: spin 4s linear infinite; }
+        .atomic-orbit::after { content: ''; position: absolute; top: -4px; left: 50%; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 12px var(--accent); }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
+    <div class="max-w-5xl mx-auto px-6">
+        <nav class="flex justify-between items-center py-12 reveal">
+            <div class="logo-container">
+                <div class="atomic-orbit"></div>
+                <div class="font-black text-xl z-10">K</div>
+            </div>
+            <div class="flex gap-8 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#skills" class="hover:text-blue-500 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-500 transition">Projects</a>
+                <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
+            </div>
+        </nav>
+
+        <header class="py-20 mb-20">
+            <h1 class="text-7xl md:text-8xl font-black tracking-tighter mb-8 reveal text-blue-500">
+                KRAZ<span class="text-white">.BIO</span>
+            </h1>
+            <p class="text-2xl text-gray-400 max-w-xl leading-relaxed reveal" style="transition-delay: 0.1s;">
+                Music Producer, Programmer and Graphic Designer Based in Hong Kong.
+            </p>
+        </header>
+
+        <section id="skills" class="mb-40">
+            <h2 class="text-xs font-bold tracking-[0.4em] text-gray-600 uppercase mb-8 reveal">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+                <div class="bento-card">
+                    <p class="text-blue-500 mono text-[10px] mb-2">01</p>
+                    <h3 class="text-xl font-bold">Music DAW</h3>
+                    <p class="text-gray-500 text-xs mt-2">Music Production</p>
+                </div>
+                <div class="bento-card">
+                    <p class="text-blue-500 mono text-[10px] mb-2">02</p>
+                    <h3 class="text-xl font-bold">HTML / CSS / JS</h3>
+                    <p class="text-gray-500 text-xs mt-2">Website Development</p>
+                </div>
+                <div class="bento-card">
+                    <p class="text-blue-500 mono text-[10px] mb-2">03</p>
+                    <h3 class="text-xl font-bold">Python / SQL</h3>
+                    <p class="text-gray-500 text-xs mt-2">Backend Logic</p>
+                </div>
+                <div class="bento-card">
+                    <p class="text-blue-500 mono text-[10px] mb-2">04</p>
+                    <h3 class="text-xl font-bold">Photoshop</h3>
+                    <p class="text-gray-500 text-xs mt-2">Graphic Design</p>
+                </div>
+            </div>
+        </section>
+
+    <section id="projects" class="mb-32">
+         <h2 class="text-[10px] font-bold tracking-[0.3em] text-gray-600 uppercase mb-6 reveal">Featured Projects</h2>
+    
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full reveal">
+    
+    <a href="https://formosa.network" target="_blank" class="bento-card group overflow-hidden relative min-h-[220px] p-6 flex flex-col justify-end border-blue-500/20 hover:border-blue-500/50 transition-all">
+        <div class="z-10">
+            <p class="text-blue-500 mono text-[10px] mb-1 uppercase font-bold tracking-widest">#1 Taiwanese PVP Server</p>
+            <h3 class="text-xl font-black mb-1 flex items-center gap-2">
+                Formosa
+                <svg class="w-4 h-4 opacity-50 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </h3>
+            <p class="text-gray-400 text-xs leading-relaxed">High-version PVP server infrastructure.</p>
         </div>
-      </div>
+    </a>
+
+    <a href="https://www.nemesis.wiki" target="_blank" class="bento-card group overflow-hidden relative min-h-[220px] p-6 flex flex-col justify-end border-white/5 hover:border-blue-500/50 transition-all">
+        <div class="z-10">
+            <p class="text-blue-400 mono text-[9px] mb-2 uppercase font-bold leading-tight">HK's Biggest Community</p>
+            <h3 class="text-xl font-black mb-1 flex items-center gap-2">
+                Nemesis
+                <svg class="w-4 h-4 opacity-50 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Minecraft community built by fans.</p>
+        </div>
+    </a>
+
+    <div class="bento-card p-6 flex flex-col justify-end min-h-[220px] border-white/5 hover:border-blue-500/50 transition-all">
+        <div class="z-10">
+            <p class="text-gray-500 mono text-[10px] mb-2 uppercase font-bold">Creative Arts</p>
+            <h3 class="text-xl font-bold mb-1">Music</h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Atmospheric sound design and production.</p>
+        </div>
     </div>
+
+</div>
+    </section>
+
+     <section id="contact" class="mb-32">
+         <h2 class="text-[10px] font-bold tracking-[0.3em] text-gray-600 uppercase mb-6 reveal">Contact Me</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 reveal">
+                <div class="bento-card border-blue-600/30 shadow-[0_0_15px_-5px_rgba(59,130,246,0.5)]">
+                    <p class="text-blue-500 mono text-[10px] mb-2 font-bold uppercase">Discord</p>
+                    <h3 class="text-xl font-bold italic">j3rry</h3>
+                </div>
+
+                <a href="https://instagram.com/yvngkrazy" target="_blank" class="bento-card hover:border-pink-500/40">
+                    <p class="text-pink-500 mono text-[10px] mb-2 font-bold uppercase">Instagram</p>
+                    <h3 class="text-xl font-bold">yvngkrazy</h3>
+                </a>
+
+                <a href="https://github.com/kraz0309" target="_blank" class="bento-card hover:border-white/30">
+                    <p class="text-white mono text-[10px] mb-2 font-bold uppercase">GitHub</p>
+                    <h3 class="text-xl font-bold">kraz0309</h3>
+                </a>
+
+                <a href="https://www.twitch.tv/kraz0309" target="_blank" class="bento-card hover:border-purple-500/30">
+                    <p class="text-purple-500 mono text-[10px] mb-2 font-bold uppercase">Twitch</p>
+                    <h3 class="text-xl font-bold">kraz0309</h3>
+                </a>
+            </div>
+        </section>
+
+        <footer class="py-12 text-center text-gray-700 text-[10px] mono uppercase tracking-widest">
+            &copy; 2026 KRAZ.BIO All Rights Reserved.
+        </footer>
+    </div>
+
+    <script>
+        // Cursor Follow Logic
+        const dot = document.getElementById('cursor-dot');
+        const outline = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+            
+            outline.animate({
+                left: e.clientX + 'px',
+                top: e.clientY + 'px'
+            }, { duration: 400, fill: "forwards" });
+        });
+
+        // Intersection Observer for Reveal on Scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
 </html>
