@@ -52,14 +52,52 @@
             </div>
         </nav>
 
-        <header class="py-20 mb-20">
-            <h1 class="text-7xl md:text-8xl font-black tracking-tighter mb-8 reveal text-blue-500">
-                KRAZ
-            </h1>
-            <p class="text-2xl text-gray-400 max-w-xl leading-relaxed reveal" style="transition-delay: 0.1s;">
-                Music Producer, Programmer and Graphic Designer Based in Hong Kong.
-            </p>
-        </header>
+<section class="py-20 mb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
+    <div>
+        <h1 class="text-7xl md:text-8xl font-black tracking-tighter mb-8 text-blue-500">
+            KRAZ
+        </h1>
+        <p class="text-2xl text-gray-400 max-w-xl leading-relaxed">
+            Music Producer, Programmer, and Graphic Designer based in Hong Kong.
+        </p>
+    </div>
+
+    <div class="bento-card p-0 overflow-hidden border-white/10 shadow-2xl">
+        <div class="flex items-center gap-2 px-4 py-3 bg-[#0d0d0d] border-b border-white/5">
+            <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+            <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+            <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+            <span class="ml-2 text-[10px] text-gray-500 mono uppercase tracking-widest">About_Me.js</span>
+        </div>
+        
+        <div class="p-6 mono text-sm sm:text-base leading-relaxed bg-[#050505]">
+            <div class="flex gap-4">
+                <span class="text-gray-700 select-none">1</span>
+                <p><span class="text-purple-400">class</span> <span class="text-yellow-400">Kraz</span> {</p>
+            </div>
+            <div class="flex gap-4">
+                <span class="text-gray-700 select-none">2</span>
+                <p class="ml-4"><span class="text-blue-400">String</span> pronouns = <span class="text-green-400">"he/him"</span>;</p>
+            </div>
+            <div class="flex gap-4">
+                <span class="text-gray-700 select-none">3</span>
+                <p class="ml-4"><span class="text-blue-400">String</span> location = <span class="text-green-400">"Hong Kong"</span>;</p>
+            </div>
+            <div class="flex gap-4">
+                <span class="text-gray-700 select-none">4</span>
+                <p class="ml-4"><span class="text-blue-400">String[]</span> languages = {<span class="text-green-400">"English"</span>, <span class="text-green-400">"Chinese"</span>};</p>
+            </div>
+            <div class="flex gap-4">
+                <span class="text-gray-700 select-none">5</span>
+                <p class="ml-4"><span class="text-blue-400">String[]</span> interests = {<span class="text-green-400">"Music"</span>, <span class="text-green-400">"Dev"</span>, <span class="text-green-400">"Design"</span>};</p>
+            </div>
+            <div class="flex gap-4">
+                <span class="text-gray-700 select-none">6</span>
+                <p>}</p>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="skills" class="mb-40">
             <h2 class="text-xs font-bold tracking-[0.4em] text-gray-600 uppercase mb-8 reveal">My Skills</h2>
