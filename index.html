@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -15,6 +15,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="selection:bg-blue-500/30">
@@ -48,6 +49,7 @@
       </div>
 
       <div class="flex gap-4 sm:gap-8 text-[11px] sm:text-[10px] font-bold text-gray-400 sm:text-gray-500 uppercase tracking-widest">
+        <a href="#about" class="py-2 px-1 hover:text-blue-500 transition-colors duration-200">About</a>
         <a href="#skills" class="py-2 px-1 hover:text-blue-500 transition-colors duration-200">Skills</a>
         <a href="#projects" class="py-2 px-1 hover:text-blue-500 transition-colors duration-200">Projects</a>
         <a href="#contact" class="py-2 px-1 hover:text-blue-500 transition-colors duration-200">Contact</a>
@@ -56,10 +58,10 @@
   </div>
 
   <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+    
     <section class="min-h-screen pt-28 pb-12 sm:pt-0 sm:pb-0 flex items-center reveal">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 w-full items-center">
         <div>
-          <p class="text-white font-semibold mb-2 sm:mb-3 tracking-wide text-base sm:text-lg">Hello, I'm</p>
           <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-tighter mb-4 sm:mb-8 text-blue-500 leading-none h-[1.1em] flex items-center">
             <span id="typewriter-text" class="typing-cursor"></span>
           </h1>
@@ -121,73 +123,246 @@
       </div>
     </section>
 
-    <section id="skills" class="mb-24 sm:mb-40 pt-12 sm:pt-20">
-      <h2 class="text-xs font-bold tracking-[0.4em] text-gray-600 uppercase mb-6 sm:mb-8 reveal">My Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 reveal">
-        <div class="bento-card">
-          <p class="text-blue-500 mono text-[10px] mb-2">01</p>
-          <h3 class="text-lg sm:text-xl font-bold">FL Studio / Studio One</h3>
-          <p class="text-gray-500 text-xs mt-1 sm:mt-2">Music Production</p>
+    <section id="about" class="mb-24 sm:mb-40 pt-12 sm:pt-20">
+      <h2 class="text-xs font-bold tracking-[0.4em] text-gray-500 uppercase mb-8 sm:mb-10 mono reveal">About Me</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch reveal">
+        <div class="flex flex-col justify-center gap-8 text-gray-300 text-sm sm:text-base leading-relaxed h-full">
+          <p>
+            Howdy, I'm Kraz, also known as Jerry. I'm a high school student, music producer, programmer, and video editor.
+          </p>
+          <p>
+            I started coding when I was in Primary 6. I loved coding things related to Minecraft and technology. I'm also good at music production and have made a lot of hip-hop beats. On top of that, I rap, mix, write lyrics, and know a bit about video editing and Photoshop. Feel free to talk to me about technology or music—I'd love to chat with you all!
+          </p>
         </div>
-        <div class="bento-card">
-          <p class="text-blue-500 mono text-[10px] mb-2">02</p>
-          <h3 class="text-lg sm:text-xl font-bold">HTML / CSS / JS</h3>
-          <p class="text-gray-500 text-xs mt-1 sm:mt-2">Website Development</p>
-        </div>
-        <div class="bento-card">
-          <p class="text-blue-500 mono text-[10px] mb-2">03</p>
-          <h3 class="text-lg sm:text-xl font-bold">Python / SQL</h3>
-          <p class="text-gray-500 text-xs mt-1 sm:mt-2">Backend Logic</p>
-        </div>
-        <div class="bento-card">
-          <p class="text-blue-500 mono text-[10px] mb-2">04</p>
-          <h3 class="text-lg sm:text-xl font-bold">Premiere Pro</h3>
-          <p class="text-gray-500 text-xs mt-1 sm:mt-2">Video Editing</p>
+
+        <div class="bento-card border-white/5 bg-[#08090d] p-8 rounded-2xl flex flex-col justify-between h-full">
+          <div class="space-y-6">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                <h3 class="text-base font-bold text-white">Tech & Server Development</h3>
+              </div>
+              <p class="text-xs text-gray-400 leading-relaxed pl-4">
+                Coding since Primary 6. Specialized in Minecraft server development, backend infrastructure, and community management tools.
+              </p>
+            </div>
+
+            <div class="border-b border-white/5"></div>
+
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                <h3 class="text-base font-bold text-white">Music Production</h3>
+              </div>
+              <p class="text-xs text-gray-400 leading-relaxed pl-4">
+                Writing and producing original hip-hop tracks.
+              </p>
+            </div>
+
+            <div class="border-b border-white/5"></div>
+
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                <h3 class="text-base font-bold text-white">Community Focus</h3>
+              </div>
+              <p class="text-xs text-gray-400 leading-relaxed pl-4">
+                Passionate about bringing people together through custom digital experiences and sound.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="mb-24 sm:mb-32 pt-6 sm:pt-10">
-      <h2 class="text-[10px] font-bold tracking-[0.3em] text-gray-600 uppercase mb-6 reveal">Featured Projects</h2>
+    <section id="skills" class="mb-24 sm:mb-40 pt-12 sm:pt-20">
+      <h2 class="text-xs font-bold tracking-[0.4em] text-gray-500 uppercase mb-8 sm:mb-10 mono reveal">My Skills</h2>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 w-full reveal">
-        <a href="https://formosa.network" target="_blank" rel="noopener noreferrer" class="bento-card project-bg project-1-bg group overflow-hidden relative min-h-[180px] sm:min-h-[220px] p-5 sm:p-6 flex flex-col justify-end border-blue-500/20">
-          <div class="z-10">
-            <p class="text-blue-500 mono text-[10px] mb-1 uppercase font-bold tracking-widest">#1 Taiwanese PVP Server</p>
-            <h3 class="text-xl font-black mb-1 flex items-center gap-2">
-              Formosa Network
-              <svg class="w-4 h-4 opacity-50 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-            </h3>
-            <p class="text-gray-400 text-xs leading-relaxed">A All-in-One High Version PVP Server that Includes Everything.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 reveal">
+        <div class="bento-card border-white/5 bg-[#08090d] p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+            <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mono">Web & Backend Engineering</h3>
+          </div>
+          <div class="flex flex-wrap gap-2.5">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-3.5 h-3.5" alt="HTML5" />
+              HTML5 / CSS3
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-3.5 h-3.5 rounded-sm" alt="JavaScript" />
+              JavaScript
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-3.5 h-3.5" alt="Java" />
+              Java
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-3.5 h-3.5" alt="Python" />
+              Python
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-3.5 h-3.5" alt="SQL" />
+              SQL
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" class="w-3.5 h-3.5" alt="Redis" />
+              Redis
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-3.5 h-3.5" alt="MongoDB" />
+              MongoDB
+            </span>
+          </div>
+        </div>
+
+        <div class="bento-card border-white/5 bg-[#08090d] p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"></path></svg>
+            <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mono">Server & Infrastructure</h3>
+          </div>
+          <div class="flex flex-wrap gap-2.5">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="w-3.5 h-3.5" alt="Linux" />
+              Linux
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-3.5 h-3.5" alt="Docker" />
+              Docker
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <svg class="w-3.5 h-3.5 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4V4zm2 2v12h12V6H6z"/></svg>
+              Server Hosting
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <svg class="w-3.5 h-3.5 text-teal-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              Pelican Panel
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <svg class="w-3.5 h-3.5 text-red-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              Security
+            </span>
+          </div>
+        </div>
+
+        <div class="bento-card border-white/5 bg-[#08090d] p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 .895-2 3-2 3 .895 3 2zm12 0c0 1.105-1.343 2-3 2s-3-.895-3-2 .895-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+            <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mono">Music Production</h3>
+          </div>
+          <div class="flex flex-wrap gap-2.5">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <svg class="w-4 h-4" viewBox="0 0 256 256" fill="none">
+                <path d="M128 0C57.308 0 0 57.308 0 128c0 70.692 57.308 128 128 128 70.692 0 128-57.308 128-128C256 57.308 198.692 0 128 0z" fill="#181818"/>
+                <path d="M168.42 165.26c-13.62 18.23-35.31 29.84-59.78 29.84-41.52 0-75.18-33.66-75.18-75.18 0-38.38 28.78-70.03 66.02-74.58-1.52 4.19-2.36 8.72-2.36 13.45 0 21.37 17.32 38.69 38.69 38.69 8.24 0 15.91-2.58 22.25-6.98 12.38 20.31 16.58 45.48 10.36 74.76z" fill="url(#fl-grad1)"/>
+                <path d="M135.81 96.8c0-21.37-17.32-38.69-38.69-38.69-4.73 0-9.26.84-13.45 2.36C97.18 23.23 128.83-5.55 167.21-5.55c41.52 0 75.18 33.66 75.18 75.18 0 24.47-11.61 46.16-29.84 59.78-29.28 6.22-54.45 2.02-74.76-10.36 4.4-6.34 6.98-14.01 6.98-22.25z" fill="url(#fl-grad2)"/>
+                <defs>
+                  <linearGradient id="fl-grad1" x1="33.46" y1="44.76" x2="168.42" y2="195.1" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FF5A00"/>
+                    <stop offset="1" stop-color="#FF1E00"/>
+                  </linearGradient>
+                  <linearGradient id="fl-grad2" x1="83.67" y1="-5.55" x2="242.39" y2="129.41" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#84C225"/>
+                    <stop offset="1" stop-color="#FF5A00"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              FL Studio
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <svg class="w-3.5 h-3.5 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1.688 4.242c2.258 0 4.103 1.845 4.103 4.103 0 2.258-1.845 4.103-4.103 4.103-1.045 0-1.996-.395-2.723-1.043l-3.326 3.326a.853.853 0 11-1.206-1.206l3.326-3.326A4.08 4.08 0 018.82 10.345c0-2.258 1.845-4.103 4.103-4.103zm0 1.707a2.396 2.396 0 100 4.792 2.396 2.396 0 000-4.792z"/>
+              </svg>
+              Studio One
+            </span>
+          </div>
+        </div>
+
+        <div class="bento-card border-white/5 bg-[#08090d] p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+            <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mono">Creative & Media</h3>
+          </div>
+          <div class="flex flex-wrap gap-2.5">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <svg class="w-3.5 h-3.5 text-[#31A8FF]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M0 0v24h24V0H0zm3.8 3.8h16.4v16.4H3.8V3.8zm2.4 3.4v9.6h2.2v-3.7h1.8c2.1 0 3.3-1.1 3.3-3 0-1.8-1.2-2.9-3.3-2.9H6.2zm2.2 1.7h1.5c.8 0 1.3.4 1.3 1.2 0 .8-.5 1.2-1.3 1.2H8.4V8.9zm8.5.5c-1.2 0-2.2.6-2.6 1.4l1.6.9c.2-.5.6-.7 1.1-.7.5 0 .8.2.8.6 0 .3-.2.5-.7.6l-1.1.2c-1.3.3-1.9.9-1.9 1.9 0 1.2 1 1.9 2.3 1.9 1 0 1.8-.4 2.2-1.1v.9h2v-4.8c-.1-1.2-1.2-1.8-2.7-1.8zm1 3.6c0 .6-.5 1-1.2 1-.6 0-1-.3-1-.8 0-.4.3-.7.9-.8l.9-.2v.8z"/>
+              </svg>
+              Photoshop
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" class="w-3.5 h-3.5" alt="Premiere Pro" />
+              Premiere Pro
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#11131a] border border-white/10 text-xs font-mono text-gray-300">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" class="w-3.5 h-3.5" alt="After Effects" />
+              After Effects
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="mb-24 sm:mb-40 pt-12 sm:pt-20">
+      <h2 class="text-xs font-bold tracking-[0.4em] text-gray-500 uppercase mb-8 sm:mb-10 mono reveal">Featured Projects</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+        <a href="https://formosa.network" target="_blank" rel="noopener noreferrer" class="bento-card group border-white/5 bg-[#08090d] rounded-2xl overflow-hidden hover:border-white/20 hover:scale-[1.02] transition-all duration-300 flex flex-col cursor-pointer">
+          <div class="w-full h-48 overflow-hidden bg-black/40 relative">
+            <img src="https://media.discordapp.net/attachments/1271123099865059390/1540953690850992158/image.png?ex=6a8bd475&is=6a8a82f5&hm=f4873f97cc51e4ac129678e9c15bcc884910c6e7f428acf01485f5c249ca6b4d&=&format=webp&quality=lossless&width=1536&height=864" alt="Formosa Network" class="w-full h-full object-cover opacity-60 brightness-75 group-hover:opacity-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#08090d] via-[#08090d]/40 to-transparent"></div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold tracking-widest text-blue-400 uppercase mono block mb-2">#1 Taiwanese PVP Server</span>
+              <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2 group-hover:text-blue-400 transition-colors">
+                Formosa Network
+                <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </h3>
+              <p class="text-xs text-gray-400 leading-relaxed">A All-in-One High Version PVP Server that Includes Everything.</p>
+            </div>
           </div>
         </a>
 
-        <a href="https://www.nemesis.wiki" target="_blank" rel="noopener noreferrer" class="bento-card project-bg project-2-bg group overflow-hidden relative min-h-[180px] sm:min-h-[220px] p-5 sm:p-6 flex flex-col justify-end border-white/5">
-          <div class="z-10">
-            <p class="text-blue-400 mono text-[9px] mb-2 uppercase font-bold leading-tight">Hong Kong's Biggest Minecraft Community</p>
-            <h3 class="text-xl font-black mb-1 flex items-center gap-2">
-              Nemesis
-              <svg class="w-4 h-4 opacity-50 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-            </h3>
-            <p class="text-gray-500 text-xs leading-relaxed">A Minecraft guild established by passionate players in Hong Kong.</p>
+        <a href="https://nemesis.wiki" target="_blank" rel="noopener noreferrer" class="bento-card group border-white/5 bg-[#08090d] rounded-2xl overflow-hidden hover:border-white/20 hover:scale-[1.02] transition-all duration-300 flex flex-col cursor-pointer">
+          <div class="w-full h-48 overflow-hidden bg-black/40 relative">
+            <img src="https://media.discordapp.net/attachments/1271123099865059390/1540953690456854618/image.png?ex=6a8bd475&is=6a8a82f5&hm=c77461f3aae9f957af13297478848b231b979523f68c8460a6ac03c988100146&=&format=webp&quality=lossless&width=1536&height=864" alt="Nemesis" class="w-full h-full object-cover opacity-60 brightness-75 group-hover:opacity-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#08090d] via-[#08090d]/40 to-transparent"></div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold tracking-widest text-blue-400 uppercase mono block mb-2">Hong Kong's Biggest Minecraft Community</span>
+              <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2 group-hover:text-blue-400 transition-colors">
+                Nemesis
+                <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </h3>
+              <p class="text-xs text-gray-400 leading-relaxed">A Minecraft guild established by passionate players in Hong Kong.</p>
+            </div>
           </div>
         </a>
 
-        <a href="https://github.com/kraz0309/python-mp3-convert-to-mp4" target="_blank" rel="noopener noreferrer" class="bento-card project-bg project-3-bg group overflow-hidden relative min-h-[180px] sm:min-h-[220px] p-5 sm:p-6 flex flex-col justify-end border-white/5">
-          <div class="z-10">
-            <p class="text-blue-400 mono text-[9px] mb-2 uppercase font-bold leading-tight">MP3 convert to MP4 tools</p>
-            <h3 class="text-xl font-black mb-1 flex items-center gap-2">
-              MP3 to MP4 Converter
-              <svg class="w-4 h-4 opacity-50 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-            </h3>
-            <p class="text-gray-500 text-xs leading-relaxed">An tools converts MP3 audio files into MP4 with album artwork.</p>
+        <a href="https://github.com/kraz0309/python-mp3-convert-to-mp4" target="_blank" rel="noopener noreferrer" class="bento-card group border-white/5 bg-[#08090d] rounded-2xl overflow-hidden hover:border-white/20 hover:scale-[1.02] transition-all duration-300 flex flex-col cursor-pointer">
+          <div class="w-full h-48 overflow-hidden bg-black/40 relative">
+            <img src="https://media.discordapp.net/attachments/1271123099865059390/1540953691165556736/image.png?ex=6a8bd475&is=6a8a82f5&hm=9a1a674e9cea5e7e7a0f831768ccc507fc66c5e0dfbc2951c7ead011dd3ba634&=&format=webp&quality=lossless&width=1536&height=864" alt="MP3 to MP4 Converter" class="w-full h-full object-cover opacity-60 brightness-75 group-hover:opacity-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#08090d] via-[#08090d]/40 to-transparent"></div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold tracking-widest text-blue-400 uppercase mono block mb-2">MP3 Convert to MP4 Tools</span>
+              <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2 group-hover:text-blue-400 transition-colors">
+                MP3 to MP4 Converter
+                <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </h3>
+              <p class="text-xs text-gray-400 leading-relaxed">An tools converts MP3 audio files into MP4 with album artwork.</p>
+            </div>
           </div>
         </a>
       </div>
     </section>
 
     <section id="contact" class="mb-32 pt-10">
-      <h2 class="text-[10px] font-bold tracking-[0.3em] text-gray-600 uppercase mb-6 reveal">Contact Me</h2>
+      <h2 class="text-xs font-bold tracking-[0.4em] text-gray-500 uppercase mb-8 sm:mb-10 mono reveal">Contact Me</h2>
       
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 reveal">
         <div class="bento-card !px-3.5 !py-5 border-blue-600/30 shadow-[0_0_15px_-5px_rgba(59,130,246,0.5)]">
@@ -233,6 +408,7 @@
     </footer>
   </div>
 
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
