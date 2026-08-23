@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>OCEAN - kraz.bio</title>
+    <meta name="theme-color" content="#030406">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="selection:bg-blue-500/30">
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+    <div id="cursor-glow"></div>
+
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+
+    <div class="fixed top-0 left-0 right-0 z-50 pt-4 sm:pt-6 px-4 sm:px-6">
+        <nav id="navbar" class="max-w-6xl mx-auto flex justify-between items-center py-3 sm:py-4 reveal relative z-10">
+            <a href="/" class="flex items-center gap-3 sm:gap-4">
+                <div class="logo-container">
+                    <div class="atomic-orbit"></div>
+                    <div class="font-black text-lg sm:text-xl z-10">K</div>
+                </div>
+                <span class="font-black tracking-widest text-xs sm:text-sm text-white mono">KRAZ.BIO</span>
+            </a>
+
+            <div class="flex gap-4 sm:gap-8 text-[11px] sm:text-[10px] font-bold text-gray-400 sm:text-gray-500 uppercase tracking-widest">
+                <a href="/" class="py-2 px-1 hover:text-blue-500 transition-colors duration-200">Home</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-4xl mx-auto min-h-screen flex flex-col justify-between pt-28 pb-12 px-4 sm:px-6 relative z-10">
+        
+        <div class="my-auto flex flex-col items-center justify-center reveal text-center">
+            <h1 class="text-2xl sm:text-4xl font-bold text-white mb-6 tracking-wide">
+                這是我的兒子海洋台灣
+            </h1>
+
+            <div class="bento-card !p-3 sm:!p-4 overflow-hidden border-blue-500/20 shadow-2xl bg-[#08090d] max-w-full">
+                <img src="https://cdn.discordapp.com/attachments/1331265060089106482/1366100445327528048/togif-31.gif?ex=6a8b2aaf&is=6a89d92f&hm=be4018aeba1f2bc07862f9d3262257c064b342619f2b35a92da004e1b25b367d&" alt="Ocean GIF" class="rounded-xl w-full max-h-[65vh] object-contain block">
+            </div>
+        </div>
+
+        <footer class="py-6 text-center text-gray-700 text-[10px] mono uppercase tracking-widest">
+            &copy; 2026 KRAZ.BIO All Rights Reserved.
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
