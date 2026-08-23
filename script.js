@@ -3,6 +3,20 @@ if ('scrollRestoration' in history) {
 }
 window.scrollTo(0, 0);
 
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smoothWheel: true,
+  touchMultiplier: 1.5,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 const words = ["JERRY", "KRAZ", "くらす"];
 let wordIndex = 0;
 let charIndex = 0;
@@ -35,19 +49,6 @@ function typeEffect() {
 }
 
 document.addEventListener('DOMContentLoaded', typeEffect);
-
-function copyEmail() {
-  navigator.clipboard.writeText('kraz@formosa.network');
-  const status = document.getElementById('copy-status');
-  status.textContent = 'Copied!';
-  status.style.opacity = '1';
-  status.classList.add('text-green-400');
-  setTimeout(() => {
-    status.textContent = 'Click to copy';
-    status.style.opacity = '';
-    status.classList.remove('text-green-400');
-  }, 2000);
-}
 
 const loaderText = document.getElementById('loader-text');
 const loaderBrandWrapper = document.getElementById('loader-brand-wrapper');
@@ -124,18 +125,11 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 const navbar = document.getElementById('navbar');
-let isTicking = false;
 
-window.addEventListener('scroll', () => {
-  if (!isTicking) {
-    window.requestAnimationFrame(() => {
-      if (window.scrollY > 30) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-      isTicking = false;
-    });
-    isTicking = true;
+lenis.on('scroll', (e) => {
+  if (e.scroll > 30) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
   }
 });
