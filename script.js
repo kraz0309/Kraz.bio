@@ -17,6 +17,20 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+});
+
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+  });
+});
+
 const words = ["JERRY", "KRAZ", "くらす"];
 let wordIndex = 0;
 let charIndex = 0;
